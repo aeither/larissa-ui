@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,11 +15,13 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "commit": "git-cz",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "semantic-release": "semantic-release --branches main"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -66,7 +68,8 @@
     "size-limit": "^6.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "semantic-release": "^18.0.0"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.9",
@@ -74,5 +77,14 @@
     "@emotion/styled": "^11",
     "framer-motion": "^4",
     "storybook-addon-performance": "^0.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeither/larissa-ui.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

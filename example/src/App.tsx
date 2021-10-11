@@ -11,9 +11,9 @@ function App() {
     <ChakraProvider theme={customTheme}>
       <Box p="16">
         <Heading>Custom Design Library</Heading>
-        <Button variant="outline">Hello OK 23</Button>
-        <QButton variant="outline">Hello OK 23</QButton>
-        <ChakraButton variant="outline">Hello OK 23</ChakraButton>
+        <Button variant="outline">Hello OK</Button>
+        <QButton variant="outline">Hello OK</QButton>
+        <ChakraButton variant="outline">Hello OK</ChakraButton>
         <Switch />
       </Box>
     </ChakraProvider>
