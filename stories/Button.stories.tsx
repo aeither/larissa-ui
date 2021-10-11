@@ -35,13 +35,3 @@ export const All = () => (
     <QButton variant="unstyle">Button</QButton>
   </>
 );
-// export const Outline = Template.bind({});
-// Outline.args = {
-//   variant: 'outline',
-//   children: 'My Button 1',
-// };
-// export const Ghost = Template.bind({});
-// Ghost.args = {
-//   variant: 'ghost',
-//   children: 'My Button 1',
-// };
