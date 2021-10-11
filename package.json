@@ -15,7 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "commit": "git-cz",
+    "commit": "cz",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
@@ -28,7 +28,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "prettier": {
@@ -61,15 +62,16 @@
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
     "babel-loader": "^8.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
+    "semantic-release": "^18.0.0",
     "size-limit": "^6.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.4.3",
-    "semantic-release": "^18.0.0"
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.9",
