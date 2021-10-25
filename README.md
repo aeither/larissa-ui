@@ -2,21 +2,29 @@
 
 # Get Started
 
-`yarn`
+```text
+yarn
+```
 
-`cd examples && npm i`
+```text
+cd examples && npm i
+```
 
 ## Development
 
 Watch styles changes
 
-`yarn start`
+```text
+yarn start
+```
 
 Inside example
 
-`npm run dev`
+```text
+npm run dev
+```
 
-## Workflow suggestion
+## Workflow suggestions
 
 Create the desired styles with storybook: `yarn storybook` and `yarn start`.
 
@@ -24,4 +32,18 @@ Then stop them and run Inside example `npm run dev` to start the application.
 
 ## Notes
 
-Right now use chakra-ui components. Use custom library only for customTheme.
+Right now use chakra-ui components. Use this custom library only for customTheme.
+
+## Publish
+
+Update package-lock with the latest dependencies
+
+```text
+npm i
+```
+
+Commit
+
+```text
+npm run acp
+```
