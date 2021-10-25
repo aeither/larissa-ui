@@ -1,21 +1,16 @@
-import type { SystemStyleObject } from "@chakra-ui/theme-tools"
+import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const baseStyle: SystemStyleObject = {
-  transitionProperty: "common",
-  transitionDuration: "fast",
-  transitionTimingFunction: "ease-out",
-  cursor: "pointer",
-  textDecoration: "none",
-  outline: "none",
-  color: "inherit",
-  _hover: {
-    textDecoration: "underline",
+const Link: DeepPartial<Theme["components"]["Link"]> = {
+  baseStyle: {
+    color: "white",
+    _hover: {
+      color: "aqua",
+      textDecoration: "none",
+    },
+    _focus: {
+      boxShadow: "none",
+    },
   },
-  _focus: {
-    boxShadow: "outline",
-  },
-}
+};
 
-export default {
-  baseStyle,
-}
+export default Link;

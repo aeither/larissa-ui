@@ -1,21 +1,20 @@
 import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const Select: DeepPartial<Theme["components"]["Select"]> = {
+const NumberInput: DeepPartial<Theme["components"]["NumberInput"]> = {
   variants: {
     outline: {
       field: {
         borderRadius: "sm",
-        borderColor: "smoke",
-        borderWidth: "1px",
         color: "stone",
+        borderColor: "smoke",
         _hover: {
           borderColor: "purple",
         },
         _active: {
-          boxShadow: "none !important",
+          boxShadow: "none",
         },
         _focus: {
-          boxShadow: "none !important",
+          boxShadow: "none",
           borderColor: "purplelight",
         },
       },
@@ -23,4 +22,4 @@ const Select: DeepPartial<Theme["components"]["Select"]> = {
   },
 };
 
-export default Select;
+export default NumberInput;

@@ -1,4 +1,4 @@
-# larissa-ui
+# dapper-ui
 
 # Get Started
 
@@ -18,7 +18,7 @@ Inside example
 
 ## Workflow suggestion
 
-Create the desired style with storybook: `yarn storybook` and `yarn start`.
+Create the desired styles with storybook: `yarn storybook` and `yarn start`.
 
 Then stop them and run Inside example `npm run dev` to start the application.
 

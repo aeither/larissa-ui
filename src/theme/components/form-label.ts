@@ -1,18 +1,9 @@
-import type { SystemStyleObject } from "@chakra-ui/theme-tools"
+import { DeepPartial, Theme } from "@chakra-ui/react";
 
-const baseStyle: SystemStyleObject = {
-  fontSize: "md",
-  marginEnd: 3,
-  mb: 2,
-  fontWeight: "medium",
-  transitionProperty: "common",
-  transitionDuration: "normal",
-  opacity: 1,
-  _disabled: {
-    opacity: 0.4,
+const FormLabel: DeepPartial<Theme["components"]["FormLabel"]> = {
+  baseStyle: {
+    color: "white",
   },
-}
+};
 
-export default {
-  baseStyle,
-}
+export default FormLabel;
