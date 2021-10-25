@@ -36,6 +36,14 @@ Right now use chakra-ui components. Use this custom library only for customTheme
 
 ## Publish
 
+- Change the package name to one that is available on npm.
+
+Setup semantic release
+
+```text
+npx semantic-release-cli setup
+```
+
 Update package-lock with the latest dependencies
 
 ```text
