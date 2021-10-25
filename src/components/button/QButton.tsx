@@ -9,7 +9,7 @@ export const QButton = (args: ButtonProps & { children?: React.ReactNode }) => {
       textColor="#ffcc00"
       _hover={{
         transform: 'translateY(-2px)',
-        boxShadow: 'lg',
+        boxShadow: 'md',
         fontWeight: 'bold',
         background: '#ffcc00',
         color: '#6F3FF5',
