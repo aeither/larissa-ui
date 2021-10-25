@@ -55,3 +55,18 @@ Commit
 ```text
 npm run acp
 ```
+
+## Usage
+
+```tsx
+import { extendTheme } from "@chakra-ui/react";
+import { customTheme } from "dapper-ui";
+
+const theme = extendTheme(customTheme);
+
+...
+
+<ChakraProvider theme={theme}>
+    <Component {...pageProps} />
+</CacheProvider>
+```
