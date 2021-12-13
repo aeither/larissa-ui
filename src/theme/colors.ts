@@ -56,29 +56,31 @@ const extendedColors: DeepPartial<
 > &
   ExtendedColors = {
   // Basic
-  neutralDarkest: '#0F0A1E',
-  neutralDarker: '#18112C',
-  neutralDark: '#513B91',
+  neutralDarkest: '#141a1e',
+  neutralDarker: '#1a2227',
+  neutralDark: '#202a30',
   neutralLightest: '#fff',
-  neutralLighter: '#EFEDF5',
-  neutralLight: '#AFA2D6',
+  neutralLighter: '#c7d2da',
+  neutralLight: '#505b63',
+
+  
 
   // Functional
-  success: '#9AF1A8',
-  error: '#F86D97',
+  success: '#00d897',
+  error: '#f1356e',
 
   // Main
   primary: {
-    '50': '#EDE7FD',
-    '100': '#CDBDFA',
-    '200': '#AC92F6', //
-    '300': '#8C68F3',
-    '400': '#6C3DF0',
-    '500': '#4C13EC', //
-    '600': '#3C0FBD',
-    '700': '#2D0B8E',
-    '800': '#1E085E',
-    '900': '#0F042F',
+    '50': '#7cd2b2',
+    '100': '#66cba5',
+    '200': '#50c398', //
+    '300': '#3abc8b',
+    '400': '#24b47e',
+    '500': '#24b47e', //
+    '600': '#20a271',
+    '700': '#1d9065',
+    '800': '#197e58',
+    '900': '#166c4c',
   },
   accentDark: {
     '50': '#FDF7E7',
