@@ -1,2 +1,2 @@
 export const colorScheme = 'primary';
-export const borderRadius = 'md';
+export const borderRadius = 'lg';

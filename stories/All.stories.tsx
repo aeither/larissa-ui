@@ -154,10 +154,21 @@ export const All = () => {
             <Text color={textVioletColor}>Accent Text in Card</Text>
           </Center>
         </HStack>
+        <HStack>
+          <Center boxSize="150px" layerStyle="solid-hover3">
+            <Text color={textVioletColor}>Accent Text in Card</Text>
+          </Center>
+          <Center boxSize="150px" layerStyle="outline-hover3">
+            <Text color={textVioletColor}>Accent Text in Card</Text>
+          </Center>
+          <Center boxSize="150px" layerStyle="no-border-hover3">
+            <Text color={textVioletColor}>Accent Text in Card</Text>
+          </Center>
+        </HStack>
 
         <Text textStyle="h1">
           Lorem ipsum dolor sit amet,
-          <Box as="span" color={titleColor}>
+          <Box as="span" layerStyle="gradient-text">
             {' '}
             consetetur{' '}
           </Box>
@@ -202,6 +213,7 @@ export const All = () => {
             Hello
           </Button>
         </HStack>
+        <Button layerStyle="gradient">Hello</Button>
 
         <Button onClick={onOpenDrawer}>Open Drawer</Button>
         <Drawer isOpen={isOpenDrawer} placement="left" onClose={onCloseDrawer}>
