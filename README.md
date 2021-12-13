@@ -106,10 +106,18 @@ const myTheme = {
 const theme = extendTheme(customTheme, myTheme);
 ```
 
-#### Automation Setup
+### Automation Setup
 
 npm i for lock file.
 
 run semantic-release-cli setup
 (need npm login and gh token)
 then run acp
+
+### Potential Error
+
+if you have too modern npm version and encounter 
+Cannot read property 'createSnapshot' of undefined
+```
+npm i --legacy-peer-deps
+```
