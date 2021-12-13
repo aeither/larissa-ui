@@ -71,8 +71,6 @@ const theme = extendTheme(customTheme);
 </CacheProvider>
 ```
 
--
-
 ## Extend the theme
 
 ```tsx
@@ -108,8 +106,10 @@ const myTheme = {
 const theme = extendTheme(customTheme, myTheme);
 ```
 
-- Automation Setup
+#### Automation Setup
 
-semantic-release-cli setup
+npm i for lock file.
+
+run semantic-release-cli setup
 (need npm login and gh token)
 then run acp
