@@ -1,21 +1,26 @@
-import type { SystemStyleObject } from "@chakra-ui/theme-tools"
+import type { SystemStyleFunction } from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
+import { colors } from '../colors';
 
-const baseStyle: SystemStyleObject = {
-  transitionProperty: "common",
-  transitionDuration: "fast",
-  transitionTimingFunction: "ease-out",
-  cursor: "pointer",
-  textDecoration: "none",
-  outline: "none",
-  color: "inherit",
-  _hover: {
-    textDecoration: "underline",
-  },
-  _focus: {
-    boxShadow: "outline",
-  },
-}
+const baseStyle: SystemStyleFunction = (props) => {
+  return {
+    transitionProperty: 'common',
+    transitionDuration: 'fast',
+    transitionTimingFunction: 'ease-out',
+    cursor: 'pointer',
+    textDecoration: 'none',
+    outline: 'none',
+    color: 'inherit',
+    _hover: {
+      color: mode(colors.accentLight[500], colors.accentDark[500])(props),
+      textDecoration: 'none',
+    },
+    _focus: {
+      boxShadow: 'none',
+    },
+  };
+};
 
 export default {
   baseStyle,
-}
+};

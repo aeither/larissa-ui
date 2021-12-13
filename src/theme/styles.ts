@@ -1,21 +1,18 @@
-import { mode, Styles } from '@chakra-ui/theme-tools';
+import { Styles } from '@chakra-ui/theme-tools';
+import useThemeColor from '../hooks/useThemeColor';
+
+const { getTextColor, getBgColor } = useThemeColor();
 
 const styles: Styles = {
   global: (props) => ({
     body: {
       fontFamily: 'body',
-      color: mode('gray.800', 'whiteAlpha.900')(props),
-      bg: mode('white', 'gray.800')(props),
+      fontSize: ['16px', '110%', '120%', '140%'],
+      color: getTextColor(props),
+      bg: getBgColor(props),
       transitionProperty: 'background-color',
       transitionDuration: 'normal',
       lineHeight: 'base',
-    },
-    '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.400')(props),
-    },
-    '*, *::before, &::after': {
-      borderColor: mode('gray.200', 'whiteAlpha.300')(props),
-      wordWrap: 'break-word',
     },
   }),
 };

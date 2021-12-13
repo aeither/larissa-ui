@@ -1,9 +1,10 @@
-import { SystemStyleObject } from "@chakra-ui/theme-tools"
+import { SystemStyleObject } from "@chakra-ui/theme-tools";
 
 const baseStyle: SystemStyleObject = {
   fontFamily: "heading",
   fontWeight: "bold",
-}
+  color: "moon",
+};
 
 const sizes: Record<string, SystemStyleObject> = {
   "4xl": {
@@ -29,14 +30,14 @@ const sizes: Record<string, SystemStyleObject> = {
   md: { fontSize: "xl", lineHeight: 1.2 },
   sm: { fontSize: "md", lineHeight: 1.2 },
   xs: { fontSize: "sm", lineHeight: 1.2 },
-}
+};
 
 const defaultProps = {
   size: "xl",
-}
+};
 
 export default {
   baseStyle,
   sizes,
   defaultProps,
-}
+};

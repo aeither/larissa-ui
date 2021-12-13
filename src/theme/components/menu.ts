@@ -1,70 +1,83 @@
-import { menuAnatomy as parts } from "@chakra-ui/anatomy"
+import { menuAnatomy as parts } from '@chakra-ui/anatomy';
 import type {
   PartsStyleFunction,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@chakra-ui/theme-tools"
-import { mode } from "@chakra-ui/theme-tools"
+} from '@chakra-ui/theme-tools';
+import { mode } from '@chakra-ui/theme-tools';
+import useThemeColor from '../../hooks/useThemeColor';
+import { borderRadius, colorScheme } from '../utils/default-props';
 
 const baseStyleList: SystemStyleFunction = (props) => {
+  const { getOverBgColor } = useThemeColor();
+
   return {
-    bg: mode("#fff", "gray.700")(props),
-    boxShadow: mode("sm", "dark-lg")(props),
-    color: "inherit",
-    minW: "3xs",
-    py: "2",
+    bg: getOverBgColor(props),
+    boxShadow: mode('sm', 'dark-lg')(props),
+    color: 'inherit',
+    minW: '3xs',
+    // py: '2',
+    p: '2',
     zIndex: 1,
-    borderRadius: "md",
-    borderWidth: "1px",
-  }
-}
+    borderRadius: borderRadius,
+    borderColor: getOverBgColor(props),
+    borderWidth: '1px',
+  };
+};
 
 const baseStyleItem: SystemStyleFunction = (props) => {
+  // const { colorScheme: c } = props;
+  const { getHover2Color, getTextColor } = useThemeColor();
+
   return {
-    py: "0.4rem",
-    px: "0.8rem",
-    transitionProperty: "background",
-    transitionDuration: "ultra-fast",
-    transitionTimingFunction: "ease-in",
+    py: '0.4rem',
+    px: '0.8rem',
+    transitionProperty: 'background',
+    transitionDuration: 'ultra-fast',
+    transitionTimingFunction: 'ease-in',
+    borderRadius: borderRadius,
     _focus: {
-      bg: mode("gray.100", "whiteAlpha.100")(props),
+      bg: getHover2Color(props),
+      color: getTextColor(props),
     },
     _active: {
-      bg: mode("gray.200", "whiteAlpha.200")(props),
+      bg: getHover2Color(props),
+      color: getTextColor(props),
     },
     _expanded: {
-      bg: mode("gray.100", "whiteAlpha.100")(props),
+      bg: getHover2Color(props),
+      color: getTextColor(props),
     },
     _disabled: {
       opacity: 0.4,
-      cursor: "not-allowed",
+      cursor: 'not-allowed',
     },
-  }
-}
+  };
+};
 
 const baseStyleGroupTitle: SystemStyleObject = {
   mx: 4,
   my: 2,
-  fontWeight: "semibold",
-  fontSize: "sm",
-}
+  fontWeight: 'semibold',
+  fontSize: 'sm',
+};
 
 const baseStyleCommand: SystemStyleObject = {
   opacity: 0.6,
-}
+};
 
 const baseStyleDivider: SystemStyleObject = {
   border: 0,
-  borderBottom: "1px solid",
-  borderColor: "inherit",
-  my: "0.5rem",
+  borderBottom: '1px solid',
+  borderColor: 'inherit',
+  my: '0.5rem',
   opacity: 0.6,
-}
+};
 
 const baseStyleButton: SystemStyleObject = {
-  transitionProperty: "common",
-  transitionDuration: "normal",
-}
+  transitionProperty: 'common',
+  transitionDuration: 'normal',
+};
 
 const baseStyle: PartsStyleFunction<typeof parts> = (props) => ({
   button: baseStyleButton,
@@ -73,9 +86,14 @@ const baseStyle: PartsStyleFunction<typeof parts> = (props) => ({
   groupTitle: baseStyleGroupTitle,
   command: baseStyleCommand,
   divider: baseStyleDivider,
-})
+});
+
+const defaultProps = {
+  colorScheme: colorScheme,
+};
 
 export default {
   parts: parts.keys,
   baseStyle,
-}
+  defaultProps,
+};

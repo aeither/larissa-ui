@@ -1,29 +1,36 @@
-import { mode, transparentize } from '@chakra-ui/theme-tools';
 import type {
-  SystemStyleObject,
   SystemStyleFunction,
+  SystemStyleObject,
 } from '@chakra-ui/theme-tools';
+import { mode, transparentize } from '@chakra-ui/theme-tools';
+import { colors } from '../colors';
+import { borderRadius } from '../utils/default-props';
 
-const baseStyle: SystemStyleObject = {
-  lineHeight: '1.2',
-  borderRadius: 'md',
-  fontFamily: 'inter',
-  fontWeight: 'semibold',
-  transitionProperty: 'common',
-  transitionDuration: 'normal',
-  _focus: {
-    boxShadow: 'none',
-  },
-  _disabled: {
-    opacity: 0.4,
-    cursor: 'not-allowed',
-    boxShadow: 'none',
-  },
-  _hover: {
-    _disabled: {
-      bg: 'initial',
+const baseStyle: SystemStyleFunction = (props) => {
+  // const { colorScheme: c, theme } = props;
+
+  return {
+    lineHeight: '1.2',
+    borderRadius: borderRadius,
+    fontWeight: 'semibold',
+    textTransform: 'uppercase',
+    transitionProperty: 'common',
+    transitionDuration: 'normal',
+    color: mode(colors.neutralLightest, colors.neutralDarkest)(props),
+    _focus: {
+      boxShadow: 'none',
     },
-  },
+    _disabled: {
+      opacity: 0.4,
+      cursor: 'not-allowed',
+      boxShadow: 'none',
+    },
+    _hover: {
+      _disabled: {
+        bg: 'initial',
+      },
+    },
+  };
 };
 
 const variantGhost: SystemStyleFunction = (props) => {
@@ -194,7 +201,6 @@ const sizes: Record<string, SystemStyleObject> = {
 const defaultProps = {
   variant: 'solid',
   size: 'md',
-  colorScheme: 'gray',
 };
 
 export default {
