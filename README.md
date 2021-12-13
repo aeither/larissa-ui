@@ -107,3 +107,9 @@ const myTheme = {
 
 const theme = extendTheme(customTheme, myTheme);
 ```
+
+- Automation Setup
+
+semantic-release-cli setup
+(need npm login and gh token)
+then run acp
