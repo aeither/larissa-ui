@@ -3,7 +3,12 @@ import { borderRadius } from './utils/default-props';
 import { lighten, darken } from '@chakra-ui/theme-tools';
 
 const layerStyles = {
-  gradient: {
+  'gradient-border': {
+    p: '2px',
+    borderRadius: borderRadius,
+    bgGradient: `linear(to-r, gray.300, ${colors.accentDark[500]}, ${colors.primary[500]})`,
+  },
+  'gradient-bg': {
     bgGradient: `linear(to-r, gray.300, ${colors.accentDark[500]}, ${colors.primary[500]})`,
     // _hover: {
     //   bgGradient: `linear(to-r, gray.300, ${colors.accentDark[500]}, ${colors.primary[500]})`,
