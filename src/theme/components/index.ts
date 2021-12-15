@@ -1,5 +1,4 @@
 import { StepsStyleConfig as Steps } from 'chakra-ui-steps';
-
 import Accordion from './accordion';
 import Alert from './alert';
 import Badge from './badge';
@@ -37,6 +36,7 @@ import Switch from './switch';
 import Table from './table';
 import Tabs from './tabs';
 import Tag from './tag';
+import Text from './text';
 import Textarea from './textarea';
 import Tooltip from './tooltip';
 
@@ -78,6 +78,7 @@ export default {
   Table,
   Tabs,
   Tag,
+  Text,
   Textarea,
   Tooltip,
   FormError,

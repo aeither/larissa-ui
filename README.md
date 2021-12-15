@@ -102,6 +102,7 @@ const myTheme = {
       },
     },
   },
+};
 
 const theme = extendTheme(customTheme, myTheme);
 ```
@@ -116,8 +117,9 @@ then run acp
 
 ### Potential Error
 
-if you have too modern npm version and encounter 
+if you have too modern npm version and encounter
 Cannot read property 'createSnapshot' of undefined
+
 ```
 npm i --legacy-peer-deps
 ```
