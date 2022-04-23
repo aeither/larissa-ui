@@ -23,7 +23,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "acp": "git add . && npm run commit && git push",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -69,7 +69,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.2",
     "size-limit": "^6.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
